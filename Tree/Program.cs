@@ -6,20 +6,24 @@ namespace Tree
     {
         static void Main(string[] args)
         {
-            MyTree.AddItem(8);
-            MyTree.AddItem(4);
-            MyTree.AddItem(5);
-            MyTree.AddItem(3);
-            MyTree.AddItem(6);
-            MyTree.AddItem(10);
-            MyTree.AddItem(9);
-            MyTree.AddItem(11);
-            MyTree.AddItem(7);
-            MyTree.AddItem(2);
+            MyTree testTree = new MyTree();
 
-            var x = MyTree.GetNodeByValue(4);
-            MyTree.GetParens(x);
-            MyTree.RemoveItem(4);
+            testTree.AddItem(8);
+            testTree.AddItem(4);
+            testTree.AddItem(5);
+            testTree.AddItem(3);
+            testTree.AddItem(6);
+            testTree.AddItem(10);
+            testTree.AddItem(9);
+            testTree.AddItem(11);
+            testTree.AddItem(7);
+            testTree.AddItem(2);
+
+            var x = testTree.GetNodeByValue(4);
+            testTree.GetParens(x);
+            testTree.RemoveItem(4);
+
+
 
         }
     }

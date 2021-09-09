@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Tree
 {
-    public class MyTree // двоичное дерево поиска
+    public class MyTree : ITree // двоичное дерево поиска
     {
         public static  TreeNode startRoot = null; // корень (основание) дерева
-        public static void AddItem(int value)
+        public  void AddItem(int value)
         {
             var newNode = new TreeNode { Value = value };
             if(startRoot == null) // если дерево пустое, создаем корень
@@ -74,7 +74,7 @@ namespace Tree
         
 
 
-        public static TreeNode GetNodeByValue(int value)
+        public  TreeNode GetNodeByValue(int value)
         {
             TreeNode r = startRoot;
             while (r != null) // выполняем обход дерева
@@ -114,7 +114,7 @@ namespace Tree
 
       
 
-        public static TreeNode GetParens(TreeNode T)   // добавила свой метод, который возвращает ноду "родителя" по заданной ноде потомка
+        public  TreeNode GetParens(TreeNode T)   // добавила свой метод, который возвращает ноду "родителя" по заданной ноде потомка
         {
             if (T.Value == startRoot.Value)
             {
@@ -163,7 +163,7 @@ namespace Tree
         }
 
 
-        public static void RemoveItem(int value)
+        public  void RemoveItem(int value)
         {
             
 
